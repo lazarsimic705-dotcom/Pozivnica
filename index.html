@@ -1,278 +1,214 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="sr">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <meta name="theme-color" content="#f4e3d7">
-  <meta name="description" content="Digitalna pozivnica za venčanje">
-  <title>Lazar & Jelena | Pozivnica za svadbu</title>
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+		/>
+		<meta name="theme-color" content="#f4e3d7" />
+		<meta name="description" content="Digitalna pozivnica za venčanje" />
+		<title>Lazar & Jelena | Pozivnica za svadbu</title>
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=DM+Serif+Display:ital@0;1&family=Great+Vibes&display=swap" rel="stylesheet">
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=DM+Serif+Display:ital@0;1&family=Great+Vibes&display=swap"
+			rel="stylesheet"
+		/>
 
-  <link rel="stylesheet" href="style.css">
-</head>
+		<link rel="stylesheet" href="style.css" />
+	</head>
 
-<body>
-  <div class="loader" id="loader">
-    <div class="loader-mark">L <span>&</span> J</div>
-    <div class="loader-line"><i></i></div>
-  </div>
+	<body>
+		<div class="loader" id="loader">
+			<div class="loader-mark">L <span>&</span> J</div>
+			<div class="loader-line"><i></i></div>
+		</div>
 
-  <button class="music-toggle" id="musicToggle" aria-label="Uključi muziku">
-    <span class="music-icon">♫</span>
-  </button>
+		<button class="music-toggle" id="musicToggle" aria-label="Uključi muziku">
+			<span class="music-icon">♫</span>
+		</button>
 
-  <audio id="music" loop preload="auto">
-    <source src="assets/music.mp3" type="audio/mpeg">
-  </audio>
+		<audio id="music" loop preload="auto">
+			<source src="assets/music.mp3" type="audio/mpeg" />
+		</audio>
 
-  <main>
+		<main>
+			<!-- HERO / COVER -->
+			<section class="hero section">
+				<div class="hero-photo"></div>
+				<div class="hero-overlay"></div>
 
-    <!-- HERO / COVER -->
-    <section class="hero section">
-      <div class="hero-photo"></div>
-      <div class="hero-overlay"></div>
+				<div class="hero-ornament ornament-top">❦</div>
 
-      <div class="hero-ornament ornament-top">❦</div>
+				<div class="hero-content reveal">
+					<p class="eyebrow">Vencanje</p>
+					<h1 class="names">
+						<span>Lazar</span>
+						<em>&amp;</em>
+						<span>Jelena</span>
+					</h1>
 
-      <div class="hero-content reveal">
-        <p class="eyebrow">Vencanje</p>
-        <h1 class="names">
-          <span>Lazar</span>
-          <em>&amp;</em>
-          <span>Jelena</span>
-        </h1>
+					<div class="hero-divider"><i></i><span>✦</span><i></i></div>
 
-        <div class="hero-divider"><i></i><span>✦</span><i></i></div>
+					<p class="date-line">18 <span>•</span> 06 <span>•</span> 2027</p>
+					<p class="hero-location">BELGRADE · SERBIA</p>
+				</div>
 
-        <p class="date-line">18 <span>•</span> 06 <span>•</span> 2027</p>
-        <p class="hero-location">BELGRADE · SERBIA</p>
-      </div>
+				<button class="scroll-cue" data-scroll="#date">
+					<span>Skroluj na dole</span>
+					<b>⌄</b>
+				</button>
 
-      <button class="scroll-cue" data-scroll="#date">
-        <span>Skroluj na dole</span>
-        <b>⌄</b>
-      </button>
+				<div class="hero-flowers flower-left">❀</div>
+				<div class="hero-flowers flower-right">❀</div>
+			</section>
 
-      <div class="hero-flowers flower-left">❀</div>
-      <div class="hero-flowers flower-right">❀</div>
-    </section>
+			<!-- DATE / SCRATCH -->
+			<section class="date section" id="date">
+				<div class="section-flower">❧</div>
+				<p class="eyebrow">SACUVAJ DATUM</p>
+				<h2>Datum</h2>
+				<p class="section-subtitle">Ogrebi da vidis datum <span>✦</span></p>
 
+				<div class="scratch-grid">
+					<article class="scratch-card">
+						<div class="scratch-value">18</div>
+						<canvas class="scratch-canvas"></canvas>
+						<span>DAN</span>
+					</article>
 
-    <!-- DATE / SCRATCH -->
-    <section class="date section" id="date">
-      <div class="section-flower">❧</div>
-      <p class="eyebrow">SACUVAJ DATUM</p>
-      <h2>Datum</h2>
-      <p class="section-subtitle">Ogrebi da vidis datum <span>✦</span></p>
+					<article class="scratch-card">
+						<div class="scratch-value">JUNE</div>
+						<canvas class="scratch-canvas"></canvas>
+						<span>MESEC</span>
+					</article>
 
-      <div class="scratch-grid">
-        <article class="scratch-card">
-          <div class="scratch-value">18</div>
-          <canvas class="scratch-canvas"></canvas>
-          <span>DAN</span>
-        </article>
+					<article class="scratch-card">
+						<div class="scratch-value">2027</div>
+						<canvas class="scratch-canvas"></canvas>
+						<span>GODINA</span>
+					</article>
+				</div>
 
-        <article class="scratch-card">
-          <div class="scratch-value">JUNE</div>
-          <canvas class="scratch-canvas"></canvas>
-          <span>MESEC</span>
-        </article>
+				<div class="date-result">18 · 06 · 2027</div>
+			</section>
 
-        <article class="scratch-card">
-          <div class="scratch-value">2027</div>
-          <canvas class="scratch-canvas"></canvas>
-          <span>GODINA</span>
-        </article>
-      </div>
+			<!-- COUNTDOWN -->
+			<section class="countdown section">
+				<div class="countdown-bg"></div>
+				<div class="section-inner">
+					<p class="eyebrow">VELIKI DAN</p>
+					<h2>Odbrojavanje do vecnosti</h2>
 
-      <div class="date-result">18 · 06 · 2027</div>
-    </section>
+					<div class="timer">
+						<div class="timer-item">
+							<strong id="days">000</strong><small>DANA</small>
+						</div>
+						<div class="timer-item">
+							<strong id="hours">00</strong><small>SATI</small>
+						</div>
+						<div class="timer-item">
+							<strong id="minutes">00</strong><small>MINUTA</small>
+						</div>
+						<div class="timer-item">
+							<strong id="seconds">00</strong><small>SEKUNDI</small>
+						</div>
+					</div>
+				</div>
+			</section>
 
+			<!-- OUR STORY -->
+			<section class="story section">
+				<div class="story-image">
+					<img src="assets/story.svg" alt="Naša priča" />
+					<span class="image-frame"></span>
+				</div>
 
-    <!-- COUNTDOWN -->
-    <section class="countdown section">
-      <div class="countdown-bg"></div>
-      <div class="section-inner">
-        <p class="eyebrow">VELIKI DAN</p>
-        <h2>Odbrojavanje do vecnosti</h2>
+				<div class="story-copy">
+					<p class="eyebrow">Nasa prica</p>
+					<h2>Dva srca,<br />jedna prica</h2>
+					<p>
+						Neke priče počinju slučajno, a neke izgledaju kao da su napisane
+						mnogo pre nego što smo ih pročitali. Naša je počela jednim susretom,
+						a danas želimo da je nastavimo zajedno — zauvek.
+					</p>
+					<div class="signature">L &amp; J</div>
+				</div>
+			</section>
 
-        <div class="timer">
-          <div class="timer-item"><strong id="days">000</strong><small>DANA</small></div>
-          <div class="timer-item"><strong id="hours">00</strong><small>SATI</small></div>
-          <div class="timer-item"><strong id="minutes">00</strong><small>MINUTA</small></div>
-          <div class="timer-item"><strong id="seconds">00</strong><small>SEKUNDI</small></div>
-        </div>
-      </div>
-    </section>
+			<!-- EVENTS -->
+			<section class="events section">
+				<p class="eyebrow">Proslava</p>
+				<h2>Pridruzi nam se</h2>
 
+				<div class="event-list">
+					<article class="event-card">
+						<div class="event-icon">◌</div>
+						<p class="event-time">18:00</p>
+						<h3>Nikkah Ceremony</h3>
+						<p class="event-place">Golden Palace</p>
+						<p class="event-address">Bulevar Wedding 18, Belgrade</p>
+						<a
+							class="button"
+							href="https://maps.google.com/?q=Belgrade,Serbia"
+							target="_blank"
+							rel="noopener"
+							>OPEN MAP</a
+						>
+					</article>
 
-    <!-- OUR STORY -->
-    <section class="story section">
-      <div class="story-image">
-        <img src="assets/story.svg" alt="Naša priča">
-        <span class="image-frame"></span>
-      </div>
+					<div class="event-line"></div>
 
-      <div class="story-copy">
-        <p class="eyebrow">Nasa prica</p>
-        <h2>Dva srca,<br>jedna prica</h2>
-        <p>
-          Neke priče počinju slučajno, a neke izgledaju kao da su
-          napisane mnogo pre nego što smo ih pročitali.
-          Naša je počela jednim susretom, a danas želimo da
-          je nastavimo zajedno — zauvek.
-        </p>
-        <div class="signature">L &amp; J</div>
-      </div>
-    </section>
+					<article class="event-card">
+						<div class="event-icon">✦</div>
+						<p class="event-time">20:00</p>
+						<h3>Wedding Reception</h3>
+						<p class="event-place">Golden Palace Ballroom</p>
+						<p class="event-address">Dinner, music &amp; dancing</p>
+					</article>
+				</div>
+			</section>
 
+			<!-- DRESS CODE -->
+			<section class="dress section">
+				<div class="dress-card">
+					<div class="section-flower">❦</div>
+					<p class="eyebrow">DRESS CODE</p>
+					<h2>Elegantno<br />&amp; vanvremenski</h2>
+					<p>
+						We invite you to dress in your favorite elegant attire and celebrate
+						this beautiful evening with us.
+					</p>
+					<div class="dress-rule"></div>
+					<span>FORMAL · BLACK TIE OPTIONAL</span>
+				</div>
+			</section>
 
-    <!-- GALLERY -->
-    <section class="gallery section">
-      <p class="eyebrow">OUR MEMORIES</p>
-      <h2>A little glimpse</h2>
+			<!-- FINAL -->
+			<section class="final section">
+				<div class="final-bg"></div>
+				<div class="final-content">
+					<p class="eyebrow">Jedva cekamo</p>
+					<h2>Vidimo se<br />ispred oltara</h2>
+					<div class="final-names">Lazar <span>&amp;</span> Jelena</div>
+					<p class="final-date">18 · 06 · 2027</p>
+				</div>
+			</section>
 
-      <div class="gallery-grid">
-        <button class="gallery-item tall" data-image="assets/photo1.svg">
-          <img src="assets/photo1.svg" alt="Fotografija 1">
-        </button>
-        <button class="gallery-item" data-image="assets/photo2.svg">
-          <img src="assets/photo2.svg" alt="Fotografija 2">
-        </button>
-        <button class="gallery-item" data-image="assets/photo3.svg">
-          <img src="assets/photo3.svg" alt="Fotografija 3">
-        </button>
-        <button class="gallery-item wide" data-image="assets/photo4.svg">
-          <img src="assets/photo4.svg" alt="Fotografija 4">
-        </button>
-      </div>
-    </section>
+			<footer>
+				<div class="footer-mark">L <span>&amp;</span> J</div>
+				<p>Napravljeno sa ljubavlju</p>
+			</footer>
+		</main>
 
+		<!-- LIGHTBOX -->
+		<div class="lightbox" id="lightbox">
+			<button id="closeLightbox" aria-label="Zatvori">×</button>
+			<img id="lightboxImage" src="" alt="" />
+		</div>
 
-    <!-- EVENTS -->
-    <section class="events section">
-      <p class="eyebrow">Proslava</p>
-      <h2>Pridruzi nam se</h2>
-
-      <div class="event-list">
-        <article class="event-card">
-          <div class="event-icon">◌</div>
-          <p class="event-time">18:00</p>
-          <h3>Nikkah Ceremony</h3>
-          <p class="event-place">Golden Palace</p>
-          <p class="event-address">Bulevar Wedding 18, Belgrade</p>
-          <a class="button" href="https://maps.google.com/?q=Belgrade,Serbia" target="_blank" rel="noopener">OPEN MAP</a>
-        </article>
-
-        <div class="event-line"></div>
-
-        <article class="event-card">
-          <div class="event-icon">✦</div>
-          <p class="event-time">20:00</p>
-          <h3>Wedding Reception</h3>
-          <p class="event-place">Golden Palace Ballroom</p>
-          <p class="event-address">Dinner, music &amp; dancing</p>
-        </article>
-      </div>
-    </section>
-
-
-    <!-- DRESS CODE -->
-    <section class="dress section">
-      <div class="dress-card">
-        <div class="section-flower">❦</div>
-        <p class="eyebrow">DRESS CODE</p>
-        <h2>Elegantno<br>&amp; vanvremenski</h2>
-        <p>We invite you to dress in your favorite elegant attire and celebrate this beautiful evening with us.</p>
-        <div class="dress-rule"></div>
-        <span>FORMAL · BLACK TIE OPTIONAL</span>
-      </div>
-    </section>
-
-
-    <!-- RSVP -->
-    <section class="rsvp section" id="rsvp">
-      <p class="eyebrow">KINDLY RESPOND</p>
-      <h2>Will you join us?</h2>
-      <p class="section-subtitle">Please confirm your attendance before <b>01 June 2027</b>.</p>
-
-      <form id="rsvpForm" class="rsvp-form">
-        <label>
-          <span>Your name</span>
-          <input id="guestName" name="name" type="text" autocomplete="name" placeholder="Ime i prezime" required>
-        </label>
-
-        <label>
-          <span>Attendance</span>
-          <select id="attendance" name="attendance" required>
-            <option value="">Izaberi</option>
-            <option value="yes">Da, dolazim ❤️</option>
-            <option value="no">Nažalost, ne mogu</option>
-          </select>
-        </label>
-
-        <label>
-          <span>Number of guests</span>
-          <input id="guestCount" name="guests" type="number" min="1" max="10" value="1" required>
-        </label>
-
-        <label>
-          <span>Message <small>(optional)</small></span>
-          <textarea id="guestMessage" name="message" rows="4" placeholder="Poruka za mladence..."></textarea>
-        </label>
-
-        <button class="button button-large" type="submit">CONFIRM RSVP</button>
-        <p class="form-message" id="formMessage"></p>
-      </form>
-    </section>
-
-
-    <!-- GIFT -->
-    <section class="gift section">
-      <div class="gift-card">
-        <div class="section-flower">❧</div>
-        <p class="eyebrow">A LITTLE NOTE</p>
-        <h2>Your presence<br>is our gift</h2>
-        <p>
-          Najvažnije nam je da ovaj dan provedemo zajedno.
-          Vaše prisustvo i lepe želje su nam najveći poklon.
-        </p>
-        <button class="button outline" id="giftButton">VIEW DETAILS</button>
-
-        <div class="gift-details" id="giftDetails">
-          <p>Za one koji žele da nam ulepšaju početak zajedničkog života:</p>
-          <strong>RSV-2027-DA</strong>
-        </div>
-      </div>
-    </section>
-
-
-    <!-- FINAL -->
-    <section class="final section">
-      <div class="final-bg"></div>
-      <div class="final-content">
-        <p class="eyebrow">WE CAN'T WAIT</p>
-        <h2>See you<br>at the altar</h2>
-        <div class="final-names">Danijel <span>&amp;</span> Aleena</div>
-        <p class="final-date">18 · 06 · 2027</p>
-      </div>
-    </section>
-
-    <footer>
-      <div class="footer-mark">D <span>&amp;</span> A</div>
-      <p>Made with love</p>
-    </footer>
-  </main>
-
-  <!-- LIGHTBOX -->
-  <div class="lightbox" id="lightbox">
-    <button id="closeLightbox" aria-label="Zatvori">×</button>
-    <img id="lightboxImage" src="" alt="">
-  </div>
-
-  <script src="script.js"></script>
-</body>
+		<script src="script.js"></script>
+	</body>
 </html>
